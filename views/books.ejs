@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>MVC Book App</title>
+    <style media="screen">
+    body {
+      justify-content: center;
+      text-align: center;
+    }
+      .container {
+        display: flex;
+      }
+      .card {
+        background-color: grey;
+        border: 1px solid black;
+        flex:1;
+        margin:10px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+
+    <h1>Book Discussions</h1>
+    <button>Add a book</button>
+
+    <div class="container">
+      <% for (let i = 0; i < books.length; i++) { %>
+        <div class="card">
+          <h3> <%= books[i].title %> </h3>
+          <img src=` <%= books[i].img_url  %>`></img>
+          <h4> <%= books[i].description %></h4>
+          <button>Disscuss</button>
+        </div>
+      <% } %>
+    </div>
+
+  </body>
+</html>

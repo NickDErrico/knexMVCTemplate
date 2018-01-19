@@ -1,7 +1,11 @@
-//Update the name of the controller below and rename the file.
-const template = require("../controllers/template.js")
-module.exports = function(app){
+const books = require("../controllers/books.js");
+const authors = require("../controllers/authors.js");
+const discussions = require("../controllers/discussions.js");
 
-  app.get('/', template.index);
+module.exports = function(app) {
+
+  app.get('/', books.index);
+
+
 
 }
