@@ -1,9 +1,9 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('books', function(table) {
     table.increments();
-    table.string('title');
-    table.string('img_url');
-    table.string('description');
+    table.text('title');
+    table.text('img_url');
+    table.text('description');
   })
 };
 
