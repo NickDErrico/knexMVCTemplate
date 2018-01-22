@@ -6,6 +6,8 @@ module.exports = function(app) {
 
   app.get('/', books.index);
 
+  app.get('/discussions/:id', discussions.byBook);
 
+  app.post('/create')
 
 }

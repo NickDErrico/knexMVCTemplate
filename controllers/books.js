@@ -9,4 +9,16 @@ module.exports = {
         });
       })
   },
+
+  addBook: (req, res) => {
+    knex('books')
+      .insert({
+        title: req.body.title,
+        img_url: req.body.img_url,
+        description: req.body.description
+      })
+      .then(() => {
+        res.redirect('/')
+      })
+  },
 }

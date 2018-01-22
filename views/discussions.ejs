@@ -26,18 +26,15 @@
   </head>
   <body>
 
-    <h1>Book App</h1>
-    <button>Add a book</button>
+    <h1>Book Discussion</h1>
+
+
 
     <div class="container">
-      <% for (let i = 0; i < books.length; i++) { %>
-        <div class='card <%= books[i].id %>'>
-          <h3> <%= books[i].title %> </h3>
-          <img src=` <%= books[i].img_url  %>`></img>
-          <p> <%= books[i].description %></p>
-          <button href='/discussions/<%=books[i].id %>'>Discuss</button>
-        </div>
-      <% } %>
+      <div class="card">
+        <img src=`<%= books[0].img_url %>`>
+        <p>`<%= books[0].description %>`</p>
+      </div>
     </div>
 
   </body>
